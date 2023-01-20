@@ -26,11 +26,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const mongoose_1 = require("mongoose");
 const dotenv = __importStar(require("dotenv"));
 const app_1 = __importDefault(require("./app"));
 dotenv.config({ debug: true });
-const { TEST } = process.env;
-console.log(TEST);
-app_1.default.listen(TEST, () => {
-    console.log('rodando');
+const { API_PORT, MONGODB_URL } = process.env;
+(0, mongoose_1.connect)(MONGODB_URL).then(() => {
+    app_1.default.listen(API_PORT, () => console.log(`running on port ${API_PORT}`));
+}).catch((error) => {
+    console.log(`server failed with error: ${error.message}`);
 });

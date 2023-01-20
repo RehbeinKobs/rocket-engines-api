@@ -4,8 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const routes_1 = require("./routes");
-const app = (0, express_1.default)();
-app.use('/example', routes_1.exampleRoute);
-app.use('/engines', routes_1.enginesRoute);
-exports.default = app;
+const router = express_1.default.Router();
+router.route('/')
+    .get((_req, res) => {
+    res.status(200).json({ message: 'hello world' });
+});
+exports.default = router;

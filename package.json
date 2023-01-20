@@ -4,6 +4,8 @@
   "description": "rocket store backend",
   "main": "./build/server.js",
   "scripts": {
+    "db-seed": "mongosh --file ./database/scripts/seed.js",
+    "db-drop": "mongosh --file ./database/scripts/drop.js",
     "start": "node ./build/server.js",
     "build": "tsc && node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
