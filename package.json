@@ -2,12 +2,13 @@
   "name": "rocket-store-backend",
   "version": "1.0.0",
   "description": "rocket store backend",
-  "main": "./build/server.js",
+  "main": "./dist/server.js",
   "scripts": {
-    "db-seed": "mongosh --file ./database/scripts/seed.js",
-    "db-drop": "mongosh --file ./database/scripts/drop.js",
-    "start": "node ./build/server.js",
-    "build": "tsc && node ./build/server.js",
+    "build": "tsc",
+    "reset": "rm -f $(find dist/ -type f -name '*.js') && find dist/ -type d -empty -delete",
+    "start": "node ./dist/server.js",
+    "db-seed": "node ./database/scripts/seed.js",
+    "db-drop": "node ./database/scripts/drop.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,8 @@
     "@tsconfig/node16": "^1.0.3",
     "@types/express": "^4.17.15",
     "@types/node": "^18.11.18",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "mongodb": "^5.1.0"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

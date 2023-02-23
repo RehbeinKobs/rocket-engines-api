@@ -1,9 +1,16 @@
+const { MongoClient } = require('mongodb');
 const dotenv = require('dotenv');
 const fs = require('fs');
 dotenv.config({ debug: true });
 
-db = connect(process.env.MONGODB_URL);
+url = process.env.MONGODB_URL;
 
 const engines = JSON.parse(fs.readFileSync('./database/data/engines.JSON'));
 
-db.engines.insertMany(engines);
+async function main() {
+    const client = await MongoClient.connect(url, { useUnifiedTopology: true });
+    await client.db().collection('engines').insertMany(engines);
+    await client.close();
+}
+
+main().catch(console.error);
