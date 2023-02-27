@@ -4,7 +4,7 @@ import app from './app';
 
 dotenv.config({ debug: true });
 
-const { API_PORT, MONGODB_URL } = process.env;
+const { API_PORT, DB_URL } = process.env;
 
 connect(MONGODB_URL as string).then(() => {
   app.listen(API_PORT, () => console.log(`running on port ${ API_PORT }`));

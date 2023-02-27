@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 dotenv.config({ debug: true });
 
-url = process.env.MONGODB_URL;
+url = process.env.DB_URL;
 
 const engines = JSON.parse(fs.readFileSync('./database/data/engines.JSON'));
 
