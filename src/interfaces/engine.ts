@@ -26,7 +26,7 @@ export interface IEngine {
   literalZeroIgnitions: boolean;
   ignitions: number;
   propellant: IPropellant[];
-  ratedBurnTime: Number;
-  ignitionReliability: Number;
-  cycleReliability: Number;
+  ratedBurnTime: number;
+  ignitionReliability: number;
+  cycleReliability: number;
 }
