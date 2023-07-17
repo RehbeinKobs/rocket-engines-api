@@ -1,8 +1,8 @@
-<p align="middle"> Disclaimer: This is not a real application. It was created for educational and practice purposes only </p>
+<p align="middle"> Disclaimer: This application was created for educational and practice purposes only </p>
 
 # About
 
-The Rocket Store Backend is a Typescript-based REST API for a future online store for purchasing rocket engines.
+The Rocket Engines API is a Typescript-based REST API for searching rocket engines.
 
 # Installation
 
