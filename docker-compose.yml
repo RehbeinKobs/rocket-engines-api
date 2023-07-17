@@ -11,4 +11,4 @@ services:
       - db
     environment:
       API_PORT: 3001
-      DB_URL: mongodb://db:27017/RocketStore
+      DB_URL: mongodb://db:27017/RocketEngineApi

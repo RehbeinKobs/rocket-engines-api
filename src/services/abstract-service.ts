@@ -1,7 +1,7 @@
 import { UpdateQuery } from "mongoose";
 import abstractODM from "../models/abstract-odm";
 
-class abstractService<T> {
+abstract class abstractService<T> {
   private model: abstractODM<T>;
   constructor(model: abstractODM<T>) {
     this.model = model;

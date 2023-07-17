@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import abstractService from '../services/abstract-service';
 
-class abstractController<T> {
+abstract class abstractController<T> {
   private service: abstractService<T>;
   constructor(service: abstractService<T>) {
     this.service = service;

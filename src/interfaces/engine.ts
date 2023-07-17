@@ -4,22 +4,22 @@ interface IPropellant {
 }
 
 export interface IEngine {
-  series: string;
+  seriesName: string;
   seriesDescription: string;
   seriesSpecLevel: string;
   manufacturer: string;
   name: string;
   description: string;
-  engineType: string;
+  sourceUrl: string;
+  imageUrl: string;
+  type: string;
   specLevel: string;
   tech: string;
-  year: number;
-  cost: number;
   mass: number;
   minThrust: number;
   maxThrust: number;
-  asl: number;
-  vac: number;
+  ispASL: number;
+  ispVac: number;
   gimbalRange: number;
   ullage: boolean;
   pressureFed: boolean;

@@ -1,7 +1,7 @@
 {
-  "name": "rocket-store-backend",
+  "name": "rocket-engine-api",
   "version": "1.0.0",
-  "description": "rocket store backend",
+  "description": "KSP Realism Overhaul engines api",
   "main": "./dist/server.js",
   "scripts": {
     "lint": "npx eslint ./src/ --ext .ts",
@@ -12,11 +12,11 @@
     "reset-dist": "rm -f $(find dist/ -type f -name '*.js') && find dist/ -type d -empty -delete",
     "docker-start": "docker-compose up --build -d",
     "docker-stop": "docker-compose down",
-    "docker-delete": "docker rm rocket-store-backend-api-1 rocket-store-backend-db-1"
+    "docker-delete": "docker rm rocket-engine-api-api-1 rocket-engine-api-db-1"
   },
   "repository": {
     "type": "git",
-    "url": "rocket-store-backend"
+    "url": "rocket-engine-api"
   },
   "author": "Vinicius Kobs",
   "license": "ISC",
