@@ -8,9 +8,11 @@ const EnginesController = new enginesController();
 router.route('/')
   .get(EnginesController.findAll)
   .post(EnginesController.insert);
-router.route('/:id')
+router.route('/id/:id')
   .get(EnginesController.findById)
   .put(EnginesController.updateById)
   .delete(EnginesController.deleteById);
+router.route('/field')
+  .get(EnginesController.findByField);
 
 export default router;

@@ -1,11 +1,14 @@
-import abstractController from "./abstract-controller";
+import AbstractController from "./abstract-controller";
 import { IEngine } from "../interfaces/engine";
-import enginesService from "../services/engines-service";
+import EnginesService from "../services/engines-service";
 
-class enginesController extends abstractController<IEngine> {
+class EnginesController extends AbstractController<IEngine> {
+  protected service: EnginesService;
   constructor() {
-    super(new enginesService());
+    const enginesService = new EnginesService();
+    super(enginesService);
+    this.service = enginesService;
   }
 }
 
-export default enginesController;
+export default EnginesController;

@@ -1,11 +1,11 @@
-import abstractODM from './abstract-odm';
+import AbstractODM from './abstract-odm';
 import { IEngine } from '../interfaces/engine';
 import SEngine from '../schemas/engine';
 
-class engineModel extends abstractODM<IEngine> {
+class EngineModel extends AbstractODM<IEngine> {
   constructor() {
     super('Engine', SEngine);
   }
 }
 
-export default engineModel;
+export default EngineModel;

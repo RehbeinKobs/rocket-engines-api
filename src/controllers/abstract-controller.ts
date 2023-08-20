@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
-import abstractService from '../services/abstract-service';
+import AbstractService from '../services/abstract-service';
 
-abstract class abstractController<T> {
-  private service: abstractService<T>;
-  constructor(service: abstractService<T>) {
+abstract class AbstractController<T> {
+  protected service;
+  constructor(service: AbstractService<T>) {
     this.service = service;
   }
   findAll = async (_req: Request, res: Response, next: NextFunction) => {
@@ -18,6 +18,16 @@ abstract class abstractController<T> {
     try {
       const { id } = req.params;
       const result = await this.service.findById(id);
+      res.status(200).json(result);
+    } catch (error) {
+      next(error);
+    }
+  };
+  findByField = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const query = req.body;
+      console.log(query);
+      const result = await this.service.findByField(query);
       res.status(200).json(result);
     } catch (error) {
       next(error);
@@ -53,4 +63,4 @@ abstract class abstractController<T> {
   };
 }
 
-export default abstractController;
+export default AbstractController;
