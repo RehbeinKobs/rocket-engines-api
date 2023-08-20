@@ -5,7 +5,7 @@ dotenv.config({ debug: true });
 
 url = process.env.DB_URL;
 
-const engines = JSON.parse(fs.readFileSync('./database/data/engines.JSON'));
+const engines = JSON.parse(fs.readFileSync('./database/data/engines-data.json'));
 
 async function main() {
     const client = await MongoClient.connect(url, { useUnifiedTopology: true });

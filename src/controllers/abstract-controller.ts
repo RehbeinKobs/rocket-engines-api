@@ -26,7 +26,6 @@ abstract class AbstractController<T> {
   findByField = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const query = req.body;
-      console.log(query);
       const result = await this.service.findByField(query);
       res.status(200).json(result);
     } catch (error) {
