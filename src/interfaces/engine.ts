@@ -13,7 +13,7 @@ export interface IEngine {
   imageUrl: string
   tags: string[]
   seriesSpecLevel: string
-  roundOnly: string
+  groundOnly: string
   gimbalRange: string
   origMass: string
   cost: string

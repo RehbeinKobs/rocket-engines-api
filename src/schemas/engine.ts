@@ -11,7 +11,7 @@ const SEngine = new Schema<IEngine>({
   imageUrl: { type: String, required: true },
   tags: [{ type: String, required: true }],
   seriesSpecLevel: { type: String, required: true },
-  roundOnly: { type: String, required: true },
+  groundOnly: { type: String, required: true },
   gimbalRange: { type: String, required: true },
   origMass: { type: String, required: true },
   cost: { type: String, required: true },

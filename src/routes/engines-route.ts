@@ -12,7 +12,7 @@ router.route('/id/:id')
   .get(EnginesController.findById)
   .put(EnginesController.updateById)
   .delete(EnginesController.deleteById);
-router.route('/field')
+router.route('/field/:field/:value')
   .get(EnginesController.findByField);
 
 export default router;
