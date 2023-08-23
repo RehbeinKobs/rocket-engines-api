@@ -1,6 +1,6 @@
-import AbstractController from "./abstract-controller";
-import { IEngine } from "../interfaces/engine";
-import EnginesService from "../services/engines-service";
+import AbstractController from './abstract-controller';
+import { IEngine } from '../interfaces/engine';
+import EnginesService from '../services/engines-service';
 
 class EnginesController extends AbstractController<IEngine> {
   protected service: EnginesService;

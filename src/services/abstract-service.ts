@@ -1,5 +1,5 @@
-import { UpdateQuery } from "mongoose";
-import AbstractODM from "../models/abstract-odm";
+import { UpdateQuery } from 'mongoose';
+import AbstractODM from '../models/abstract-odm';
 
 abstract class AbstractService<T> {
   protected model: AbstractODM<T>;
